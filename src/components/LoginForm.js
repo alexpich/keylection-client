@@ -1,6 +1,8 @@
 import {
   Button,
+  Divider,
   FormControl,
+  FormHelperText,
   Input,
   InputGroup,
   InputLeftElement,
@@ -8,26 +10,10 @@ import {
 } from '@chakra-ui/react';
 import { InfoIcon, EmailIcon, LockIcon } from '@chakra-ui/icons';
 
-const form = () => {
+const LoginForm = () => {
   return (
     <form action="submit">
       <Stack spacing={3}>
-        <FormControl isRequired>
-          <InputGroup>
-            <InputLeftElement children={<InfoIcon />} />
-            <Input
-              type="name"
-              placeholder="First name"
-              aria-label="First Name"
-            />
-          </InputGroup>
-        </FormControl>
-        <FormControl isRequired>
-          <InputGroup>
-            <InputLeftElement children={<InfoIcon />} />
-            <Input type="name" placeholder="Last name" aria-label="Last Name" />
-          </InputGroup>
-        </FormControl>
         <FormControl isRequired>
           <InputGroup>
             <InputLeftElement children={<EmailIcon />} />
@@ -45,10 +31,10 @@ const form = () => {
           </InputGroup>
         </FormControl>
 
-        <Button type="submit">Sign Up</Button>
+        <Button type="submit" boxShadow='sm'>Sign In</Button>
       </Stack>
     </form>
   );
 };
 
-export default form;
+export default LoginForm;
